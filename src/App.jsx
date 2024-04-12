@@ -3,10 +3,12 @@ import HomePage from "./pages/HomePage";
 import About from "./component/About";
 import EmployeesPage from "./pages/EmployeesPage";
 import EmployeesDetailPage from "./pages/EmployeeDetailPage";
+import Navbar from "./component/Navbar";
 
 function App() {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
