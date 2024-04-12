@@ -1,17 +1,12 @@
 nav {
-  background-color: #09153c;
+  background-color: #363943;
   color: #ffffff;
-  height: 55px;
+  height: 60px;
+  padding: 10px 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-}
-
-a:-webkit-any-link {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
