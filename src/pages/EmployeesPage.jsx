@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const API_URL = "http://localhost:4000";
 
@@ -27,9 +28,9 @@ const EmployeesPage = () => {
       <h1>All employees</h1>
       {employees.length > 0 ? (
         employees.map((employee) => (
-          <div key={employee.id}>
+          <Link key={employee.id} to={`/employees/${employee.id}`}>
             <h1>Name: {employee.name.first}</h1>
-          </div>
+          </Link>
         ))
       ) : (
         <h1>No employees</h1>
