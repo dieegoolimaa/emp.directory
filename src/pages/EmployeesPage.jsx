@@ -26,10 +26,10 @@ const EmployeesPage = () => {
   return (
     <>
       <h1>All employees</h1>
-      {employees.length > 0 ? (
+      {employees.length >= 0 ? (
         employees.map((employee) => (
           <Link key={employee.id} to={`/employees/${employee.id}`}>
-            <h1>Name: {employee.name.first}</h1>
+            <h1>Name: {employee.name}</h1>
           </Link>
         ))
       ) : (
