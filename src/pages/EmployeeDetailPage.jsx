@@ -6,6 +6,7 @@ const API_URL = "http://localhost:4000";
 const EmployeeDetailPage = () => {
   const { employeeId } = useParams();
   const [employee, setEmployee] = useState({});
+  const initialStatus = "Active";
 
   const getEmployee = async () => {
     try {
@@ -69,6 +70,8 @@ const EmployeeDetailPage = () => {
   return (
     <>
       <h1>Employee Detail Page</h1>
+      <h3>Employee picture</h3>
+      <img src={`${API_URL}/${employee.image}`} alt={employee.name} />
       <div>
         <h1>Personal Information</h1>
         <ul>
