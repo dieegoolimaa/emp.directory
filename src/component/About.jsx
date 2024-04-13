@@ -1,7 +1,8 @@
+import "./component-style/about.css";
 function About() {
   return (
     <div className="about">
-      <h1>About</h1>
+      <h1>About us</h1>
       <h2>Description</h2>
       <p>
         <b>Introduction to the Company</b>

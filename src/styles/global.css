@@ -1,14 +1,13 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(
-    360deg,
-    rgb(242, 242, 242) 0%,
-    rgba(240, 246, 247, 1) 96%
-  );
-  font-family: "Poppins", sans-serif;
-  color: black;
+  background: white;
 }
 
 h1 {
