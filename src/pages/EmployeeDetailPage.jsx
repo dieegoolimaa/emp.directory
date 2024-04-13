@@ -25,48 +25,6 @@ const EmployeeDetailPage = () => {
     getEmployee();
   }, [employeeId]);
 
-  const handleTerminateEmployee = async () => {
-    try {
-      const updatedEmployee = { ...employee, status: "Terminated" };
-      const response = await fetch(`${API_URL}/employees/${employeeId}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedEmployee),
-      });
-      if (response.ok) {
-        setEmployee(updatedEmployee);
-        alert("Employee status updated to Terminated.");
-      } else {
-        console.error("Failed to update employee status.");
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const handleReactivateEmployee = async () => {
-    try {
-      const updatedEmployee = { ...employee, status: "Active" };
-      const response = await fetch(`${API_URL}/employees/${employeeId}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedEmployee),
-      });
-      if (response.ok) {
-        setEmployee(updatedEmployee);
-        alert("Employee status updated to Active.");
-      } else {
-        console.error("Failed to update employee status.");
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   return (
     <>
       <h1>Employee Detail Page</h1>
@@ -98,38 +56,16 @@ const EmployeeDetailPage = () => {
           </li>
         </ul>
       </div>
-      <div>
-        <h1>Professional Information</h1>
-
-        <ul>
-          <li>
-            <h3>Status: {employee.status}</h3>
-            {employee.status === "Terminated" ? (
-              <button onClick={handleReactivateEmployee}>Reactivate</button>
-            ) : (
-              <button onClick={handleTerminateEmployee}>Terminate</button>
-            )}
-          </li>
-          <li>
-            <h3>Hiring Date: {employee.hiringDate}</h3>
-          </li>
-          <li>
-            <h3>Modality: {employee.modality}</h3>
-          </li>
-          <li>
-            <h3>Department: {employee.department}</h3>
-          </li>
-          <li>
-            <h3>Position: {employee.position}</h3>
-          </li>
-        </ul>
-      </div>
       <Link to="/">
         <button type="button">Home Page</button>
       </Link>
       <Link to="/employees">
         <button type="button">Employees Page</button>
       </Link>
+     
+  <Link to={`/employees/${employeeId}/management`}>
+  <button type="button">Manage Employee</button>
+</Link>
     </>
   );
 };

@@ -3,8 +3,8 @@ import HomePage from "./pages/HomePage";
 import About from "./component/About";
 import EmployeesPage from "./pages/EmployeesPage";
 import EmployeesDetailPage from "./pages/EmployeeDetailPage";
+import ManagementPage from "./pages/ManagementPage";
 import Navbar from "./component/Navbar";
-
 function App() {
   return (
     <>
@@ -13,14 +13,16 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/employees" element={<EmployeesPage />} />
-        <Route
-          path="/employees/:employeeId"
-          element={<EmployeesDetailPage />}
-        />
+
+        {/* Nested routing without `<element>` */}
+        <Route path="/employees/:employeeId">
+          <Route index element={<EmployeesDetailPage />} />
+          <Route path="management" element={<ManagementPage />} />
+        </Route>
+
         <Route path="*" element={"404 Page not found"} />
       </Routes>
     </>
   );
 }
-
 export default App;
