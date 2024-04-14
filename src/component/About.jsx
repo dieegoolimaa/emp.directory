@@ -1,51 +1,46 @@
 import "./component-style/about.css";
 function About() {
   return (
-    <div className="about">
-      <h1>About us</h1>
-      <h2>Description</h2>
-      <p>
-        <b>Introduction to the Company</b>
-        #Briefly describe the company’s mission, values, and history. #Highlight
-        any unique aspects or achievements.
-      </p>
-      <p>
-        <b>Meet the Team</b>
-        #Showcase team members with their names, roles, and profile pictures.
-        #Include a short bio or description for each person. #Mention their
-        expertise, skills, and contributions to the organization. #Consider
-        adding a fun fact or personal touch to make it engaging.
-      </p>
-      <p>
-        <b>Contact Information</b>
-        #Provide contact details for each team member, such as email addresses
-        or LinkedIn profiles. #Include any relevant social media links.
-      </p>
-      <p>
-        <b>Department Information</b>
-        #Organize team members by departments (e.g., Marketing, Engineering,
-        HR). #Explain the purpose and responsibilities of each department.
-      </p>
-      <p>
-        <b>Photos and Visuals</b>
-        #Use high-quality images of team members. #Consider adding group photos
-        or candid shots to create a friendly atmosphere.
-      </p>
-      <p>
-        <b>Company Values and Culture</b>
-        #Describe the company’s core values and how they influence day-to-day
-        work. #Share any unique traditions, events, or team-building activities.
-      </p>
-      <p>
-        <b>Employee Stories</b>
-        #Include personal stories or anecdotes from team members. #Show their
-        journey within the company or their passion for their work Project
-      </p>
-      <p>
-        <b>Description</b>
-        The Project is about Recipe Team members DIEGO, CELSO AND RUI.
-      </p>
-    </div>
+      <div className="about">
+          <h1>About</h1>
+          <h2>Description</h2>
+
+<h3>Introduction to the Company:
+#Tech Innovators Employee Directory
+
+#History
+Founded in # by visionary entrepreneurs, Tech Innovators started as a small software development firm.
+Over the years, we’ve grown into a global technology powerhouse, serving Fortune 500 companies across diverse industries.
+
+Company Overview
+Mission: At Tech Innovators, our mission is to empower businesses through cutting-edge technology solutions.
+We believe in driving innovation, fostering collaboration, and delivering exceptional value to our clients.
+
+#Values:
+Innovation: We thrive on creativity and embrace new ideas.
+Integrity: We uphold honesty, transparency, and ethical conduct.
+Teamwork: Together, we achieve more than we can individually.</h3>
+
+
+<h3>Meet the Team:</h3>
+#John Smith
+Webdev
+Email: #
+Phone: #
+
+#Celso Gando
+Webdev
+Email: MrGandomaestro@outlook.com
+Phone: #
+
+#Rui Folgado
+Webdev
+Email: #
+Phone: #
+
+
+
+      </div>
   );
 }
 
