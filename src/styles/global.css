@@ -19,3 +19,14 @@ h1 {
   font-weight: bold;
   align-items: center;
 }
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
