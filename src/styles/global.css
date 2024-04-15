@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -11,8 +12,10 @@ body {
 }
 
 h1 {
-  display: block;
+  display: flex;
+  justify-content: center;
   color: black;
   font-size: 2em;
   font-weight: bold;
+  align-items: center;
 }

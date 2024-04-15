@@ -1,0 +1,70 @@
+.employeepage {
+  border-color: #ccd5ed;
+  font-family: "Poppins", sans-serif;
+  padding: 20px; /* Add some padding */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin: 10px;
+  background-color: #ccd5ed;
+}
+
+.employeepage h1,
+.employeepage h2,
+.employeepage button {
+  margin: 10px 0; /* Spacing between elements */
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.employee-list {
+  list-style: none; /* Remove default list style */
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margin */
+}
+
+.employee-preview {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  background: linear-gradient(
+    176deg,
+    rgb(221, 220, 220) 0%,
+    rgba(246, 252, 255, 1) 100%
+  );
+}
+
+.employee-info {
+  flex: 1; /* Allow info to fill remaining space */
+}
+
+.employee-info h2 {
+  font-size: 18px; /* Increase name font size slightly */
+  color: #1c213d;
+  margin: 0; /* Remove top margin */
+  padding: 0px 20px; /* Add some padding */
+}
+
+.employee-info p {
+  color: #5f5d5d; /* Lighter color for position */
+  margin-top: 5px; /* Spacing after name */
+  padding: 0px 20px; /* Add some padding */
+}
+
+button {
+  background-color: #1c213d; /* White button background */
+  color: white; /* White text */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 20px; /* Button padding */
+  cursor: pointer; /* Indicate clickable button */
+}
+
+button:hover {
+  background-color: #394881; /* Slight background change on hover */
+}

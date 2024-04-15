@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import EmployeeForm from "../component/EmployeeForm";
+import "./pages-style/employeepage.css";
 
 const API_URL = "http://localhost:4000";
 
@@ -27,25 +28,32 @@ const EmployeesPage = () => {
   const handleToggleForm = () => {
     setShowAddForm(!showAddForm);
   };
-
   return (
-    <>
+    <div className="employeepage">
       <h1>All employees</h1>
-      
+
       <button onClick={handleToggleForm}>
         {showAddForm ? "Cancel Add Employee" : "Add New Employee"}
       </button>
       {showAddForm && <EmployeeForm />}
       {employees.length > 0 ? (
-        employees.map((employee) => (
-          <Link key={employee.id} to={`/employees/${employee.id}`}>
-            <h1>Name: {employee.name}</h1>
-          </Link>
-        ))
+        <ul className="employee-list">
+          {employees.map((employee) => (
+            <li key={employee.id} className="employee-preview">
+              <Link to={`/employees/${employee.id}`}>
+                <img src={employee.avatar} />
+                <div className="employee-info">
+                  <h2>{employee.name}</h2>
+                  <p>{employee.position}</p>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
       ) : (
         <h1>No employees</h1>
       )}
-    </>
+    </div>
   );
 };
 

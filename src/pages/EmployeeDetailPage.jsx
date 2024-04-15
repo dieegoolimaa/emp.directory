@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import "./pages-style/empdetailpage.css";
 
 const API_URL = "http://localhost:4000";
 
@@ -26,47 +27,54 @@ const EmployeeDetailPage = () => {
   }, [employeeId]);
 
   return (
-    <>
+    <div className="empdetailpage">
       <h1>Employee Detail Page</h1>
-      <h3>Employee picture</h3>
-      <img src={`${API_URL}/${employee.image}`} alt={employee.name} />
-      <div>
-        <h1>Personal Information</h1>
-        <ul>
-          <li>
-            <h3>ID: {employee.id}</h3>
-          </li>
-          <li>
-            <h3>Name: {employee.name}</h3>
-          </li>
-          <li>
-            <h3>Gender: {employee.gender}</h3>
-          </li>
-          <li>
-            <h3>Email: {employee.email}</h3>
-          </li>
-          <li>
-            <h3>Phone: {employee.phone}</h3>
-          </li>
-          <li>
-            <h3>City: {employee.location?.city}</h3>{" "}
-          </li>
-          <li>
-            <h3>Country: {employee.location?.country}</h3>
-          </li>
-        </ul>
+
+      <div className="info-boxes">
+        <div className="personal-info">
+          <h2>Personal Information</h2>
+          <ul>
+            <li>
+              <h3>ID: {employee.id}</h3>
+            </li>
+            <li>
+              <h3>Name: {employee.name}</h3>
+            </li>
+            <li>
+              <h3>Gender: {employee.gender}</h3>
+            </li>
+            <li>
+              <h3>Email: {employee.email}</h3>
+            </li>
+            <li>
+              <h3>Phone: {employee.phone}</h3>
+            </li>
+            <li>
+              <h3>City: {employee.location?.city}</h3>
+            </li>
+            <li>
+              <h3>Country: {employee.location?.country}</h3>
+            </li>
+          </ul>
+        </div>
+        <div className="professional-info">
+          <h2>Professional Experience</h2>
+          {/* Add content based on your API response for experience */}
+          <Link to={`/employees/${employeeId}/management`}>
+            <button type="button">Manage Employee</button>
+          </Link>
+        </div>
       </div>
-      <Link to="/">
-        <button type="button">Home Page</button>
-      </Link>
-      <Link to="/employees">
-        <button type="button">Employees Page</button>
-      </Link>
-     
-  <Link to={`/employees/${employeeId}/management`}>
-  <button type="button">Manage Employee</button>
-</Link>
-    </>
+
+      <div className="other-buttons">
+        <Link to="/">
+          <button type="button">Home Page</button>
+        </Link>
+        <Link to="/employees">
+          <button type="button">Employees Page</button>
+        </Link>
+      </div>
+    </div>
   );
 };
 

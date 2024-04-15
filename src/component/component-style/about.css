@@ -8,8 +8,7 @@
   padding: 20px;
   text-align: center;
   text-wrap: wrap;
-  border: 1px solid black;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* border: 1px solid black; */
   border-radius: 8px;
   border-color: #ccd5ed;
   margin: 10px;
