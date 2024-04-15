@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import "./pages-style/empdetailpage.css";
-
+import { Button } from "@mantine/core";
 const API_URL = "http://localhost:4000";
 
 const EmployeeDetailPage = () => {
@@ -27,54 +26,48 @@ const EmployeeDetailPage = () => {
   }, [employeeId]);
 
   return (
-    <div className="empdetailpage">
+    <>
       <h1>Employee Detail Page</h1>
-
-      <div className="info-boxes">
-        <div className="personal-info">
-          <h2>Personal Information</h2>
-          <ul>
-            <li>
-              <h3>ID: {employee.id}</h3>
-            </li>
-            <li>
-              <h3>Name: {employee.name}</h3>
-            </li>
-            <li>
-              <h3>Gender: {employee.gender}</h3>
-            </li>
-            <li>
-              <h3>Email: {employee.email}</h3>
-            </li>
-            <li>
-              <h3>Phone: {employee.phone}</h3>
-            </li>
-            <li>
-              <h3>City: {employee.location?.city}</h3>
-            </li>
-            <li>
-              <h3>Country: {employee.location?.country}</h3>
-            </li>
-          </ul>
-        </div>
-        <div className="professional-info">
-          <h2>Professional Experience</h2>
-          {/* Add content based on your API response for experience */}
-          <Link to={`/employees/${employeeId}/management`}>
-            <button type="button">Manage Employee</button>
-          </Link>
-        </div>
+      <h3>Employee picture</h3>
+      <img src={employee.picture} alt={employee.name} />
+      <div>
+        <h1>Personal Information</h1>
+        <ul>
+          <li>
+            <h3>ID: {employee.id}</h3>
+          </li>
+          <li>
+            <h3>Name: {employee.name}</h3>
+          </li>
+          <li>
+            <h3>Gender: {employee.gender}</h3>
+          </li>
+          <li>
+            <h3>Email: {employee.email}</h3>
+          </li>
+          <li>
+            <h3>Phone: {employee.phone}</h3>
+          </li>
+          <li>
+            <h3>City: {employee.location?.city}</h3>{" "}
+          </li>
+          <li>
+            <h3>Country: {employee.location?.country}</h3>
+          </li>
+        </ul>
       </div>
-
-      <div className="other-buttons">
-        <Link to="/">
-          <button type="button">Home Page</button>
-        </Link>
-        <Link to="/employees">
-          <button type="button">Employees Page</button>
-        </Link>
-      </div>
-    </div>
+      <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+  <Link to="/">
+    <Button type="button">Home Page</Button>
+  </Link>
+  <Link to="/employees">
+    <Button type="button">Employees Page</Button>
+  </Link>
+  <Link to={`/employees/${employeeId}/management`}>
+    <Button type="button">Manage Employee</Button>
+  </Link>
+</div>
+    </>
   );
 };
 

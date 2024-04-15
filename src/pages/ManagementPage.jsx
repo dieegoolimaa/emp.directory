@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import { Button } from "@mantine/core";
 
 const API_URL = "http://localhost:4000";
 
@@ -121,25 +122,27 @@ const ManagementPage = () => {
       onChange={(e) => setNewSalary(e.target.value.replace(" €", ""))}
       placeholder="Enter new salary"
     />
-    <button onClick={handleUpdateSalary}>Update Salary</button>
+    <Button onClick={handleUpdateSalary}>Update Salary</Button>
   </div>
 ) : (
-  <button onClick={() => setShowSalaryForm(true)}>Update Salary</button>
+  <Button onClick={() => setShowSalaryForm(true)}>Update Salary</Button>
 )}
         <li>
           <h3>Status: {employee.status}</h3>
-          <button onClick={() => handleUpdateEmployeeStatus("Terminated")}>Terminate</button>
-          <button onClick={() => handleUpdateEmployeeStatus("Active")}>Reactivate</button>
+          <Button onClick={() => handleUpdateEmployeeStatus("Terminated")}>Terminate</Button>
+          <Button onClick={() => handleUpdateEmployeeStatus("Active")}>Reactivate</Button>
         </li>
       </ul>
-      <button onClick={handleDeleteEmployee}>Delete Employee</button>
-    </div>
-    <Link to="/">
-      <button type="button">Home Page</button>
-    </Link>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+      <Button onClick={handleDeleteEmployee}>Delete Employee</Button>
     <Link to="/employees">
-        <button type="button">Employees Page</button>
+        <Button type="button">Employees Page</Button>
       </Link>
+      <Link to="/">
+      <Button type="button">Home Page</Button>
+    </Link>
+      </div>
   </>
 );
 };
