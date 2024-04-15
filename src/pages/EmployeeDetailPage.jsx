@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-
+import { Button } from "@mantine/core";
 const API_URL = "http://localhost:4000";
 
 const EmployeeDetailPage = () => {
@@ -29,7 +29,7 @@ const EmployeeDetailPage = () => {
     <>
       <h1>Employee Detail Page</h1>
       <h3>Employee picture</h3>
-      <img src={`${API_URL}/${employee.image}`} alt={employee.name} />
+      <img src={employee.picture} alt={employee.name} />
       <div>
         <h1>Personal Information</h1>
         <ul>
@@ -56,16 +56,17 @@ const EmployeeDetailPage = () => {
           </li>
         </ul>
       </div>
-      <Link to="/">
-        <button type="button">Home Page</button>
-      </Link>
-      <Link to="/employees">
-        <button type="button">Employees Page</button>
-      </Link>
-     
+      <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+  <Link to="/">
+    <Button type="button">Home Page</Button>
+  </Link>
+  <Link to="/employees">
+    <Button type="button">Employees Page</Button>
+  </Link>
   <Link to={`/employees/${employeeId}/management`}>
-  <button type="button">Manage Employee</button>
-</Link>
+    <Button type="button">Manage Employee</Button>
+  </Link>
+</div>
     </>
   );
 };
