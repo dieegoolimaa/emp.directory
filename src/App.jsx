@@ -15,7 +15,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/employees" element={<EmployeesPage />} />
 
-        {/* Nested routing without `<element>` */}
         <Route path="/employees/:employeeId">
           <Route index element={<EmployeesDetailPage />} />
           <Route path="management" element={<ManagementPage />} />

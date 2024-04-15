@@ -28,11 +28,15 @@ const EmployeeDetailPage = () => {
 
   return (
     <div className="empdetailpage">
-      <h2>Check all the details about {employee.name}</h2>
-      <img src={employee.picture} alt={employee.name} />
-      <h3>
-        <b>Status:</b> {employee.status}
-      </h3>
+      <div className="container-employee">
+        <div className="title">
+          <h1 className="h1">Check all the details about {employee.name}</h1>
+        </div>
+        <img src={employee.picture} alt={employee.name} />
+        <h3>
+          <b>Status:</b> {employee.status}
+        </h3>
+      </div>
       <div className="container-informations">
         <div className="personal-info">
           <h2>Personal Information</h2>
