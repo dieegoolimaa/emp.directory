@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import EmployeeForm from "../component/EmployeeForm";
 import { Button, TextInput } from "@mantine/core";
+import "./pages-style/employeepage.css";
 
 const API_URL = "http://localhost:4000";
 
@@ -39,7 +40,7 @@ const EmployeesPage = () => {
   );
 
   return (
-    <>
+    <div className="employees-page">
       <h1>All employees</h1>
       <Button onClick={handleToggleForm} style={{ width: "100%" }}>
         {showAddForm ? "Cancel" : "Add New Employee"}
@@ -50,18 +51,28 @@ const EmployeesPage = () => {
         placeholder="Enter name"
         value={searchQuery}
         onChange={handleSearch}
-        style={{ marginBottom: "16px" }}
       />
       {filteredEmployees.length > 0 ? (
-        filteredEmployees.map((employee) => (
-          <Link key={employee.id} to={`/employees/${employee.id}`}>
-            <h1>Name: {employee.name}</h1>
-          </Link>
-        ))
+        <ul>
+          {filteredEmployees.map((employee) => (
+            <Link to={`/employees/${employee.id}`}>
+              <li key={employee.id}>
+                <div className="employee-card">
+                  <img src={employee.picture} alt={employee.name} />
+
+                  <div className="employee-name-position">
+                    <h3>{employee.name}</h3>
+                    <p>{employee.position}</p>
+                  </div>
+                </div>
+              </li>
+            </Link>
+          ))}
+        </ul>
       ) : (
         <h1>No employees found</h1>
       )}
-    </>
+    </div>
   );
 };
 
