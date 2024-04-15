@@ -2,7 +2,9 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import About from "./component/About";
 import EmployeesPage from "./pages/EmployeesPage";
-
+import Navbar from "./component/Navbar";
+import EmployeesDetailPage from "./pages/EmployeeDetailPage";
+import ManagementPage from "./pages/ManagementPage";
 function App() {
   return (
     <>
