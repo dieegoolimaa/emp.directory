@@ -6,7 +6,7 @@ function About() {
           <h2>Description</h2>
 
 <h3>Introduction to the Company:
-#Tech Innovators Employee Directory
+#Tech Innovators Employee Directory (TIED)
 
 #History
 Founded in # by visionary entrepreneurs, Tech Innovators started as a small software development firm.
@@ -23,22 +23,31 @@ Teamwork: Together, we achieve more than we can individually.</h3>
 
 
 <h3>Meet the Team:</h3>
-#John Smith
-Webdev
-Email: #
-Phone: #
+#Diego Lima
+FrontEnd Developer
+Email: #dieegoolimaa@gmail.com
+LinkedIn: #
+Github: https://github.com/dieegoolimaa
+Image: 
+
 
 #Celso Gando
 Webdev
 Email: MrGandomaestro@outlook.com
-Phone: #
+LinkedIn: #
+GitHub: https://github.com/TheOne-1-dot
+Image: 
+
 
 #Rui Folgado
-Webdev
-Email: #
-Phone: #
+Full Stack Developer
+Email: rui.folgado@hotmail.com
+LinkedIn: #
+GitHub: https://github.com/Folgad0
+Image:
 
 
+Email: 
 
       </div>
   );
