@@ -13,8 +13,10 @@ const EmployeeForm = ({ employee, isUpdate = false }) => {
   const [country, setCountry] = useState(isUpdate ? employee.location.country : '');
   const [department, setDepartment] = useState(isUpdate ? employee.department : '');
   const [position, setPosition] = useState(isUpdate ? employee.position : '');
+  const [income, setIncome] = useState(isUpdate ? employee.income : '');
   const [hiringDate, setHiringDate] = useState(isUpdate ? employee.hiringDate : '');
   const [modality, setModality] = useState(isUpdate ? employee.modality : '');
+
   const navigate = useNavigate();
 
   async function handleSubmit(e) {
@@ -29,6 +31,7 @@ const EmployeeForm = ({ employee, isUpdate = false }) => {
       location: { city, country },
       department,
       position,
+      income,
       hiringDate,
       modality,
     };
@@ -105,6 +108,11 @@ const EmployeeForm = ({ employee, isUpdate = false }) => {
           <label>
             Hiring Date:{' '}
             <input type="date" value={hiringDate} onChange={(e) => setHiringDate(e.target.value)} />
+          </label>
+        </li>
+        <li>
+          <label>
+            Initial Sallary: <input value={income} onChange={(e) => setIncome(e.target.value)} />
           </label>
         </li>
         <li>
