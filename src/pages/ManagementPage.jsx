@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Button } from "@mantine/core";
+import "./pages-style/managementpage.css";
 
 const API_URL = "http://localhost:4000";
 
@@ -93,54 +94,75 @@ const ManagementPage = () => {
   };
 
   return (
-    <>
+    <div className="management-page">
       <h1>Management Page</h1>
       <p>Current Selected User's Name: {employee.name}</p>
-      <div>
-        <h1>Professional Information</h1>
-        <ul>
-          <li>
-            <h3>Hiring Date: {employee.hiringDate}</h3>
-          </li>
-          <li>
-            <h3>Modality: {employee.modality}</h3>
-          </li>
-          <li>
-            <h3>Department: {employee.department}</h3>
-          </li>
-          <li>
-            <h3>Position: {employee.position}</h3>
-          </li>
-          <li>
-            <h3>Current Income: {employee.income} €</h3>
-          </li>
-          {showSalaryForm ? (
-            <div>
-              <input
-                type="number"
-                value={newSalary}
-                onChange={(e) => setNewSalary(e.target.value.replace(" €", ""))}
-                placeholder="Enter new salary"
-              />
-              <Button onClick={handleUpdateSalary}>Update Salary</Button>
-            </div>
-          ) : (
-            <Button onClick={() => setShowSalaryForm(true)}>
-              Update Salary
-            </Button>
-          )}
-          <li>
-            <h3>Status: {employee.status}</h3>
-            <Button onClick={() => handleUpdateEmployeeStatus("Terminated")}>
-              Terminate
-            </Button>
-            <Button onClick={() => handleUpdateEmployeeStatus("Active")}>
-              Reactivate
-            </Button>
-          </li>
-        </ul>
+      <div className="main-container">
+        <div>
+          <div className="title-management">
+            <h1>Professional Information</h1>
+          </div>
+          <ul>
+            <li>
+              <h3>
+                <b>Hiring Date:</b>
+                {employee.hiringDate}
+              </h3>
+            </li>
+            <li>
+              <h3>
+                <b>Modality: </b>
+                {employee.modality}
+              </h3>
+            </li>
+            <li>
+              <h3>
+                <b>Department: </b>
+                {employee.department}
+              </h3>
+            </li>
+            <li>
+              <h3>
+                <b>Position:</b> {employee.position}
+              </h3>
+            </li>
+            <li>
+              <h3>
+                <b>Current Income:</b> {employee.income} €
+              </h3>
+            </li>
+            {showSalaryForm ? (
+              <div>
+                <input
+                  type="number"
+                  value={newSalary}
+                  onChange={(e) =>
+                    setNewSalary(e.target.value.replace(" €", ""))
+                  }
+                  placeholder="Enter new salary"
+                />
+                <Button onClick={handleUpdateSalary}>Update Salary</Button>
+              </div>
+            ) : (
+              <Button onClick={() => setShowSalaryForm(true)}>
+                Update Salary
+              </Button>
+            )}
+            <li>
+              <h3>
+                <b>Status:</b> {employee.status}
+              </h3>
+              <Button onClick={() => handleUpdateEmployeeStatus("Terminated")}>
+                Terminate
+              </Button>
+              <Button onClick={() => handleUpdateEmployeeStatus("Active")}>
+                Reactivate
+              </Button>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
         <Button onClick={handleDeleteEmployee}>Delete Employee</Button>
         <Link to="/employees">
           <Button type="button">Employees Page</Button>
@@ -149,7 +171,7 @@ const ManagementPage = () => {
           <Button type="button">Home Page</Button>
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 export default ManagementPage;
