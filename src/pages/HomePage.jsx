@@ -1,15 +1,32 @@
-
 import "./pages-style/homepage.css";
 
 function HomePage() {
   // Companies List
   const companies = [
-    { name: 'Future Tech Innovations', logo: '/Public/logos/future_tech.gif' },
-    { name: 'Advanced Robotics Corp', logo: '/Public/logos/advanced_robotics.jpg' },
-    { name: 'Quantum Computing Solutions', logo: '/Public/logos/quantum_c.s..gif' },
-    { name: 'Alpha Energy Dynamics', logo: '/Public/logos/alpha_energy_d.jpg' },
-    { name: 'Data Science Analytics Ltd', logo: '/Public/logos/data_science.gif' },
-    { name: 'Cyber Security Associates', logo: '/Public/logos/cyber_security.jpg' },
+    {
+      name: "Future Tech Innovations",
+      logo: "./component/logos/future_tech.gif",
+    },
+    {
+      name: "Advanced Robotics Corp",
+      logo: "./component/logos/advanced_robotics.jpg",
+    },
+    {
+      name: "Quantum Computing Solutions",
+      logo: "./component/logos/quantum_c.s..gif",
+    },
+    {
+      name: "Alpha Energy Dynamics",
+      logo: "./component/logos/alpha_energy_d.jpg",
+    },
+    {
+      name: "Data Science Analytics Ltd",
+      logo: "./component/logos/data_science.gif",
+    },
+    {
+      name: "Cyber Security Associates",
+      logo: "./component/logos/cyber_security.jpg",
+    },
   ];
 
   return (
