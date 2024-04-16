@@ -1,15 +1,25 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Button, Switch } from "@mantine/core";
+import { Notification, rem } from '@mantine/core';
+import { IconX, IconCheck } from '@tabler/icons-react';
+
+
 import "./pages-style/managementpage.css";
 
 const API_URL = "http://localhost:4000";
 
 const ManagementPage = () => {
+  //notification message and icon when switching between active and terminated status
+  const xIcon = <IconX style={{ width: rem(20), height: rem(20) }} />;
+  const checkIcon = <IconCheck style={{ width: rem(20), height: rem(20) }} />;
+
+  // State Variables
   const { employeeId } = useParams();
   const [employee, setEmployee] = useState({});
   const [newSalary, setNewSalary] = useState("");
   const [showSalaryForm, setShowSalaryForm] = useState(false);
+  const [notification, setNotification] = useState(null);
   const navigate = useNavigate();
   const initialStatus = "Active";
 
@@ -43,6 +53,10 @@ const ManagementPage = () => {
       });
       if (response.ok) {
         setEmployee(updatedEmployee);
+        // Show notification
+        setNotification(newStatus === 'Active' ? 'Employee status changed to Active' : 'Employee status changed to Terminated');
+        // Hide notification after 3 seconds
+        setTimeout(() => setNotification(null), 3000);
       } else {
         console.error("Failed to update employee status.");
       }
@@ -151,17 +165,20 @@ const ManagementPage = () => {
               </Button>
             )}
             <li>
-  <h3>
-    <b>Status:</b> {employee.status}
-  </h3>
-  <Switch
-    checked={employee.status === "Active"}
-    size="lg"
-    onChange={(event) =>
-      handleUpdateEmployeeStatus(event.currentTarget.checked ? "Active" : "Terminated")
-    }
-  />
-</li>
+              <h3>
+                <b>Status:</b> {employee.status}
+              </h3>
+              <Switch
+                checked={employee.status === 'Active'}
+                size="lg"
+                onChange={(event) =>
+                  handleUpdateEmployeeStatus(event.currentTarget.checked ? 'Active' : 'Terminated')}/>
+
+              {notification && (
+                <Notification color={employee.status === 'Active' ? 'teal' : 'red'} title="Employee status updated!" mt="md">
+                  {notification}
+                </Notification>)}
+            </li>
           </ul>
         </div>
       </div>
