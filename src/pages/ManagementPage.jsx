@@ -3,7 +3,8 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { Button, Switch } from "@mantine/core";
 import { Notification, rem } from '@mantine/core';
 import { IconX, IconCheck } from '@tabler/icons-react';
-
+import { SlHome } from "react-icons/sl";
+import { TiArrowBackOutline } from "react-icons/ti";
 
 import "./pages-style/managementpage.css";
 
@@ -184,11 +185,11 @@ const ManagementPage = () => {
       </div>
       <div className="button-container">
         <Button onClick={handleDeleteEmployee}>Delete Employee</Button>
-        <Link to="/employees">
-          <Button type="button">Employees Page</Button>
+        <Link to={`/employees/${employeeId}`}>
+          <Button type="button"><TiArrowBackOutline /></Button>
         </Link>
         <Link to="/">
-          <Button type="button">Home Page</Button>
+          <Button type="button"><SlHome /></Button>
         </Link>
       </div>
     </div>
