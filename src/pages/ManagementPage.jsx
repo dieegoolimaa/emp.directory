@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Button, Switch } from "@mantine/core";
-import { Notification, rem } from '@mantine/core';
-import { IconX, IconCheck } from '@tabler/icons-react';
+import { Notification, rem } from "@mantine/core";
+import { IconX, IconCheck } from "@tabler/icons-react";
 import { SlHome } from "react-icons/sl";
 import { TiArrowBackOutline } from "react-icons/ti";
 
@@ -55,7 +55,11 @@ const ManagementPage = () => {
       if (response.ok) {
         setEmployee(updatedEmployee);
         // Show notification
-        setNotification(newStatus === 'Active' ? 'Employee status changed to Active' : 'Employee status changed to Terminated');
+        setNotification(
+          newStatus === "Active"
+            ? "Employee status changed to Active"
+            : "Employee status changed to Terminated"
+        );
         // Hide notification after 3 seconds
         setTimeout(() => setNotification(null), 3000);
       } else {
@@ -122,7 +126,7 @@ const ManagementPage = () => {
           <ul>
             <li>
               <h3>
-                <b>Hiring Date:</b>
+                <b>Hiring Date: </b>
                 {employee.hiringDate}
               </h3>
             </li>
@@ -171,15 +175,24 @@ const ManagementPage = () => {
               </h3>
               <div style={{ position: 'relative', display: 'inline-block', left: '-7em' }}>
               <Switch
-                checked={employee.status === 'Active'}
+                checked={employee.status === "Active"}
                 size="lg"
                 onChange={(event) =>
-                  handleUpdateEmployeeStatus(event.currentTarget.checked ? 'Active' : 'Terminated')}/>
+                  handleUpdateEmployeeStatus(
+                    event.currentTarget.checked ? "Active" : "Terminated"
+                  )
+                }
+              />
               </div>
               {notification && (
-                <Notification color={employee.status === 'Active' ? 'teal' : 'red'} title="Employee status updated!" mt="md">
+                <Notification
+                  color={employee.status === "Active" ? "teal" : "red"}
+                  title="Employee status updated!"
+                  mt="md"
+                >
                   {notification}
-                </Notification>)}
+                </Notification>
+              )}
             </li>
           </ul>
         </div>
@@ -187,10 +200,14 @@ const ManagementPage = () => {
       <div className="button-container">
         <Button onClick={handleDeleteEmployee}>Delete Employee</Button>
         <Link to={`/employees/${employeeId}`}>
-          <Button type="button"><TiArrowBackOutline /></Button>
+          <Button type="button">
+            <TiArrowBackOutline />
+          </Button>
         </Link>
         <Link to="/">
-          <Button type="button"><SlHome /></Button>
+          <Button type="button">
+            <SlHome />
+          </Button>
         </Link>
       </div>
     </div>
