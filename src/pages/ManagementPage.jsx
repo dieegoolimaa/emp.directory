@@ -96,11 +96,13 @@ const ManagementPage = () => {
   return (
     <div className="management-page">
       <h1>Management Page</h1>
-      <p>Current Selected User's Name: {employee.name}</p>
+      <p>
+        Current Selected User's Name: <b>{employee.name}</b>
+      </p>
       <div className="main-container">
         <div>
           <div className="title-management">
-            <h1>Professional Information</h1>
+            <h2>Professional Information</h2>
           </div>
           <ul>
             <li>
@@ -152,17 +154,21 @@ const ManagementPage = () => {
               <h3>
                 <b>Status:</b> {employee.status}
               </h3>
-              <Button onClick={() => handleUpdateEmployeeStatus("Terminated")}>
-                Terminate
-              </Button>
-              <Button onClick={() => handleUpdateEmployeeStatus("Active")}>
-                Reactivate
-              </Button>
+              <div style={{ display: "flex", justifyContent: "space-around" }}>
+                <Button
+                  onClick={() => handleUpdateEmployeeStatus("Terminated")}
+                >
+                  Terminate
+                </Button>
+                <Button onClick={() => handleUpdateEmployeeStatus("Active")}>
+                  Reactivate
+                </Button>
+              </div>
             </li>
           </ul>
         </div>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
+      <div className="button-container">
         <Button onClick={handleDeleteEmployee}>Delete Employee</Button>
         <Link to="/employees">
           <Button type="button">Employees Page</Button>

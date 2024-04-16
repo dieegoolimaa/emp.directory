@@ -110,7 +110,8 @@ ul {
 .btn-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin-bottom: 20px;
+  width: 300px;
+  height: auto;
 }
