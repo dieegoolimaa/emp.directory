@@ -20,7 +20,7 @@ const ManagementPage = () => {
         const response = await fetch(`${API_URL}/employees/${employeeId}`);
         if (response.ok) {
           const data = await response.json();
-          setEmployee({ ...data, status: initialStatus });
+          setEmployee({ ...data });
         }
       } catch (error) {
         console.error("Error fetching employee data:", error);
@@ -150,21 +150,20 @@ const ManagementPage = () => {
                 Update Salary
               </Button>
             )}
-            <li>
-              <h3>
-                <b>Status:</b> {employee.status}
-              </h3>
-              <div style={{ display: "flex", justifyContent: "space-around" }}>
-                <Button
-                  onClick={() => handleUpdateEmployeeStatus("Terminated")}
-                >
-                  Terminate
-                </Button>
-                <Button onClick={() => handleUpdateEmployeeStatus("Active")}>
-                  Reactivate
-                </Button>
-              </div>
-            </li>
+          <li>
+  <h3>
+    <b>Status:</b> {employee.status}
+  </h3>
+  {employee.status === "Active" ? (
+    <Button onClick={() => handleUpdateEmployeeStatus("Terminated")}>
+      Terminate
+    </Button>
+  ) : (
+    <Button onClick={() => handleUpdateEmployeeStatus("Active")}>
+      Reactivate
+    </Button>
+  )}
+</li>
           </ul>
         </div>
       </div>
