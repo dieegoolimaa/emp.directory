@@ -15,7 +15,7 @@ const EmployeeDetailPage = () => {
       if (response.ok) {
         const data = await response.json();
         console.log(data);
-        setEmployee({ ...data });
+        setEmployee({ ...data, status: initialStatus });
       }
     } catch (error) {
       console.log(error);

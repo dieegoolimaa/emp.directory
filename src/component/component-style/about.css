@@ -10,11 +10,14 @@
   text-wrap: wrap;
   /* border: 1px solid black; */
   border-radius: 8px;
-  border-color: #ccd5ed;
   margin: 10px;
   background-color: #ccd5ed;
 }
 
-
-
-
+.container {
+  display: flex;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px;
+  background-color: #6675a1;
+}
