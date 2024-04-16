@@ -12,8 +12,8 @@ function About() {
         Founded in the beginning of 2021 by visionary entrepreneurs, Tech Innovators started as a small software development firm.
         Over the years, we’re growing into a global technology powerhouse, serving Fortune 500 companies across diverse industries.
 
-        <h3> <strong>Company Overview</strong> </h3>
-        <strong> Mission </strong>: At Tech Innovators, our mission is to empower businesses through cutting-edge technology solutions.
+        <h3> <strong>Company Overview:</strong> </h3>
+        <strong> Mission </strong> At Tech Innovators, our mission is to empower businesses through cutting-edge technology solutions.
         We believe in driving innovation, fostering collaboration, and delivering exceptional value to our clients.
 
         <h3> <strong>Values</strong> </h3>
