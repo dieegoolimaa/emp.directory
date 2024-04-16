@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { Button } from "@mantine/core";
+import { Button, Switch } from "@mantine/core";
 import "./pages-style/managementpage.css";
 
 const API_URL = "http://localhost:4000";
@@ -43,7 +43,6 @@ const ManagementPage = () => {
       });
       if (response.ok) {
         setEmployee(updatedEmployee);
-        alert(`Employee status updated to ${newStatus}.`);
       } else {
         console.error("Failed to update employee status.");
       }
@@ -152,21 +151,17 @@ const ManagementPage = () => {
               </Button>
             )}
             <li>
-              <h3>
-                <b>Status:</b> {employee.status}
-              </h3>
-              {employee.status === "Active" ? (
-                <Button
-                  onClick={() => handleUpdateEmployeeStatus("Terminated")}
-                >
-                  Terminate
-                </Button>
-              ) : (
-                <Button onClick={() => handleUpdateEmployeeStatus("Active")}>
-                  Reactivate
-                </Button>
-              )}
-            </li>
+  <h3>
+    <b>Status:</b> {employee.status}
+  </h3>
+  <Switch
+    checked={employee.status === "Active"}
+    size="lg"
+    onChange={(event) =>
+      handleUpdateEmployeeStatus(event.currentTarget.checked ? "Active" : "Terminated")
+    }
+  />
+</li>
           </ul>
         </div>
       </div>
