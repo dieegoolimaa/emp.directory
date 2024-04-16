@@ -19,7 +19,7 @@ img {
   border-radius: 50%;
   margin-bottom: 10px;
   box-shadow: 5px 3px 3px #98999c;
-  border: 0.2px solid #1c213d;
+  /* border: 0.2px solid #1c213d; */
 }
 
 .container-informations {
@@ -34,7 +34,7 @@ img {
   text-align: center;
   width: 710px;
   margin-left: 10px;
-  border: 0.2px solid #1c213d;
+  /* border: 0.2px solid #1c213d; */
   border-radius: 8px;
   background-color: #f5f5f5;
   margin-bottom: 10px;
@@ -56,12 +56,11 @@ img {
 .personal-info,
 .professional-info {
   display: flex;
-  padding: 10px;
   width: 350px;
   flex-direction: column;
   text-align: left;
   margin-left: 10px;
-  border: 0.2px solid #1c213d;
+  /* border: 0.2px solid #1c213d; */
   border-radius: 8px;
   background-color: #f5f5f5;
   margin-bottom: 50px;
@@ -100,11 +99,10 @@ ul {
 
 .manage-btn {
   display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: flex-end;
+  height: 50px;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
 }
 
 .btn-container {
@@ -114,4 +112,16 @@ ul {
   align-items: center;
   width: 300px;
   height: auto;
+}
+
+.title-empdetailpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  align-items: center;
+  height: 35px;
+  background-color: #1c213d;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }

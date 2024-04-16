@@ -39,7 +39,9 @@ const EmployeeDetailPage = () => {
       </div>
       <div className="container-informations">
         <div className="personal-info">
-          <h2>Personal Information</h2>
+          <div className="title-empdetailpage">
+            <h2>Personal Information</h2>
+          </div>
           <ul>
             <li>
               <h3>
@@ -79,7 +81,9 @@ const EmployeeDetailPage = () => {
           </ul>
         </div>
         <div className="professional-info">
-          <h2>Professional Information</h2>
+          <div className="title-empdetailpage">
+            <h2>Professional Information</h2>
+          </div>
           <ul>
             <li>
               <h3>

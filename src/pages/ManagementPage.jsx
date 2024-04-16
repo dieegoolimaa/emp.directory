@@ -96,6 +96,7 @@ const ManagementPage = () => {
   return (
     <div className="management-page">
       <h1>Management Page</h1>
+      <img src={employee.picture} />
       <p>
         Current Selected User's Name: <b>{employee.name}</b>
       </p>
@@ -150,20 +151,22 @@ const ManagementPage = () => {
                 Update Salary
               </Button>
             )}
-          <li>
-  <h3>
-    <b>Status:</b> {employee.status}
-  </h3>
-  {employee.status === "Active" ? (
-    <Button onClick={() => handleUpdateEmployeeStatus("Terminated")}>
-      Terminate
-    </Button>
-  ) : (
-    <Button onClick={() => handleUpdateEmployeeStatus("Active")}>
-      Reactivate
-    </Button>
-  )}
-</li>
+            <li>
+              <h3>
+                <b>Status:</b> {employee.status}
+              </h3>
+              {employee.status === "Active" ? (
+                <Button
+                  onClick={() => handleUpdateEmployeeStatus("Terminated")}
+                >
+                  Terminate
+                </Button>
+              ) : (
+                <Button onClick={() => handleUpdateEmployeeStatus("Active")}>
+                  Reactivate
+                </Button>
+              )}
+            </li>
           </ul>
         </div>
       </div>
