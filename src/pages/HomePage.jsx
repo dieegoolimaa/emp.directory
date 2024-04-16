@@ -2,12 +2,14 @@
 import "./pages-style/homepage.css";
 
 function HomePage() {
-  // List of companies
+  // Companies List
   const companies = [
-    { name: 'Company 1', logo: 'logo1.png' },
-    { name: 'Company 2', logo: 'logo2.png' },
-    { name: 'Company 3', logo: 'logo3.png' },
-    // Add more companies as needed
+    { name: 'Future Tech Innovations', logo: '/Public/logos/future_tech.gif' },
+    { name: 'Advanced Robotics Corp', logo: '/Public/logos/advanced_robotics.jpg' },
+    { name: 'Quantum Computing Solutions', logo: '/Public/logos/quantum_c.s..gif' },
+    { name: 'Alpha Energy Dynamics', logo: '/Public/logos/alpha_energy_d.jpg' },
+    { name: 'Data Science Analytics Ltd', logo: '/Public/logos/data_science.gif' },
+    { name: 'Cyber Security Associates', logo: '/Public/logos/cyber_security.jpg' },
   ];
 
   return (
@@ -15,14 +17,18 @@ function HomePage() {
       <h1>Welcome to TD - Tech Innovators</h1>
       <p>Your trusted partner in innovation.</p>
 
-      <h2>Companies We have Worked With</h2>
-      <div className="companies-grid">
-        {companies.map((company, index) => (
-          <div key={index} className="company-card">
-            <img src={company.logo} alt={company.name} />
-            <h3>{company.name}</h3>
-          </div>
-        ))}
+      {/* Other content here */}
+
+      <div className="companies-section">
+        <h2>Companies We have Worked With</h2>
+        <div className="companies-list">
+          {companies.map((company, index) => (
+            <div key={index} className="company-card">
+              <img src={company.logo} alt={company.name} />
+              <h3>{company.name}</h3>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
