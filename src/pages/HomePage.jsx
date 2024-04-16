@@ -1,10 +1,10 @@
 import "./pages-style/homepage.css";
-import Future_Tech_Innovations from "./component/logos/future_tech.gif";
-import Advanced_Robotics_Corp from "./component/logos/advanced_robotics.jpg";
-import Quantum_Computing_Solutions from "./component/logos/quantum_c.s..gif"; // Quantum Computing Solutions
-import Alpha_Energy_Dynamics from "./component/logos/alpha_energy_d.jpg";
-import Data_Science_Analytics_Ltd from "./component/logos/data_science.gif";
-import Cyber_Security_Associates from "./component/logos/cyber_security.jpg";
+import Future_Tech_Innovations from "./pages/logos/future_tech.gif";
+import Advanced_Robotics_Corp from "./pages/logos/advanced_robotics.jpg";
+import Quantum_Computing_Solutions from "./pages/logos/quantum_c.s..gif"; // Quantum Computing Solutions
+import Alpha_Energy_Dynamics from "./pages/logos/alpha_energy_d.jpg";
+import Data_Science_Analytics_Ltd from "./pages/logos/data_science.gif";
+import Cyber_Security_Associates from "./pages/logos/cyber_security.jpg";
 
 function HomePage() {
   // Companies List
