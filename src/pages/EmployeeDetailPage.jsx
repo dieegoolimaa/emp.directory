@@ -32,7 +32,7 @@ const EmployeeDetailPage = () => {
         <div className="title">
           <h1 className="h1">Check all the details about {employee.name}</h1>
         </div>
-        <img src={employee.picture} alt={employee.name} />
+        <img src={employee.picture} />
         <h3>
           <b>Status:</b> {employee.status}
         </h3>
