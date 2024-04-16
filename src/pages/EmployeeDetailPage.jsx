@@ -3,6 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import { Button } from "@mantine/core";
 const API_URL = "http://localhost:4000";
 import "./pages-style/empdetailpage.css";
+import { SlHome } from "react-icons/sl";
+import { TiArrowBackOutline } from "react-icons/ti";
+
 
 const EmployeeDetailPage = () => {
   const { employeeId } = useParams();
@@ -120,10 +123,10 @@ const EmployeeDetailPage = () => {
       </div>
       <div className="btn-container">
         <Link to="/">
-          <Button type="button">Home Page</Button>
+          <Button type="button"><SlHome /></Button>
         </Link>
         <Link to="/employees">
-          <Button type="button">Employees Page</Button>
+          <Button type="button"><TiArrowBackOutline /></Button>
         </Link>
       </div>
     </div>
