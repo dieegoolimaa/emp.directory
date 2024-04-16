@@ -7,7 +7,6 @@ function About() {
   return (
     <div>
       <div className="about">
-        <h1>About</h1>
         <h2>(TIED)</h2>
         <p>Tech Innovators Employee Directory </p>
         <h3>
@@ -55,7 +54,7 @@ function About() {
         <div className="column">
           <img src="Public/Images/Diego.jpg" alt="Diego Fernandes" />
           <h2>Diego Fernandes</h2>
-          <p>Frontend Developer</p>
+          <p>Full Stack Developer</p>
           <p>
             <MdEmail /> <a href="mailto:dieegoolimaa@gmail.com">Email</a>
           </p>
@@ -74,7 +73,7 @@ function About() {
         <div className="column">
           <img src="Public/Images/Celso.jpg" alt="Celso Gando" />
           <h2>Celso Gando</h2>
-          <p>Frontend Dev</p>
+          <p>Full Stack Developer</p>
           <p>
             <MdEmail /> <a href="mailto:MrGandomaestro@outlook.com">Email</a>
           </p>
