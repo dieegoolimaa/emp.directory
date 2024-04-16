@@ -1,39 +1,39 @@
 import "./pages-style/homepage.css";
-import Future_Tech_Innovations from "./pages/logos/future_tech.gif";
-import Advanced_Robotics_Corp from "./pages/logos/advanced_robotics.jpg";
-import Quantum_Computing_Solutions from "./pages/logos/quantum_c.s..gif"; // Quantum Computing Solutions
-import Alpha_Energy_Dynamics from "./pages/logos/alpha_energy_d.jpg";
-import Data_Science_Analytics_Ltd from "./pages/logos/data_science.gif";
-import Cyber_Security_Associates from "./pages/logos/cyber_security.jpg";
+// import Future_Tech_Innovations from "./pages/logos/future_tech.gif";
+// import Advanced_Robotics_Corp from "./pages/logos/advanced_robotics.jpg";
+// import Quantum_Computing_Solutions from "./pages/logos/quantum_c.s..gif"; // Quantum Computing Solutions
+// import Alpha_Energy_Dynamics from "./pages/logos/alpha_energy_d.jpg";
+// import Data_Science_Analytics_Ltd from "./pages/logos/data_science.gif";
+// import Cyber_Security_Associates from "./pages/logos/cyber_security.jpg";
 
 function HomePage() {
   // Companies List
-  const companies = [
-    {
-      name: "Future Tech Innovations",
-      logo: Future_Tech_Innovations,
-    },
-    {
-      name: "Advanced Robotics Corp",
-      logo: Advanced_Robotics_Corp,
-    },
-    {
-      name: "Quantum Computing Solutions",
-      logo: Quantum_Computing_Solutions,
-    },
-    {
-      name: "Alpha Energy Dynamics",
-      logo: Alpha_Energy_Dynamics,
-    },
-    {
-      name: "Data Science Analytics Ltd",
-      logo: Data_Science_Analytics_Ltd,
-    },
-    {
-      name: "Cyber Security Associates",
-      logo: Cyber_Security_Associates,
-    },
-  ];
+  // const companies = [
+  //   {
+  //     name: "Future Tech Innovations",
+  //     logo: Future_Tech_Innovations,
+  //   },
+  //   {
+  //     name: "Advanced Robotics Corp",
+  //     logo: Advanced_Robotics_Corp,
+  //   },
+  //   {
+  //     name: "Quantum Computing Solutions",
+  //     logo: Quantum_Computing_Solutions,
+  //   },
+  //   {
+  //     name: "Alpha Energy Dynamics",
+  //     logo: Alpha_Energy_Dynamics,
+  //   },
+  //   {
+  //     name: "Data Science Analytics Ltd",
+  //     logo: Data_Science_Analytics_Ltd,
+  //   },
+  //   {
+  //     name: "Cyber Security Associates",
+  //     logo: Cyber_Security_Associates,
+  //   },
+  // ];
 
   return (
     <div className="home-page">
