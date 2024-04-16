@@ -44,14 +44,14 @@ function HomePage() {
 
       <div className="companies-section">
         <h2>Companies We have Worked With</h2>
-        <div className="companies-list">
+        {/* <div className="companies-list">
           {companies.map((company, index) => (
             <div key={index} className="company-card">
               <img src={company.logo} alt={company.name} />
               <h3>{company.name}</h3>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
