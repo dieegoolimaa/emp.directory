@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Button } from "@mantine/core";
-const API_URL = "http://localhost:4000";
 import "./pages-style/empdetailpage.css";
 import { SlHome } from "react-icons/sl";
 import { TiArrowBackOutline } from "react-icons/ti";
-
 
 const EmployeeDetailPage = () => {
   const { employeeId } = useParams();
@@ -14,7 +12,9 @@ const EmployeeDetailPage = () => {
 
   const getEmployee = async () => {
     try {
-      const response = await fetch(`${API_URL}/employees/${employeeId}`);
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/employees/${employeeId}`
+      );
       if (response.ok) {
         const data = await response.json();
         console.log(data);
@@ -123,10 +123,14 @@ const EmployeeDetailPage = () => {
       </div>
       <div className="btn-container">
         <Link to="/">
-          <Button type="button"><SlHome /></Button>
+          <Button type="button">
+            <SlHome />
+          </Button>
         </Link>
         <Link to="/employees">
-          <Button type="button"><TiArrowBackOutline /></Button>
+          <Button type="button">
+            <TiArrowBackOutline />
+          </Button>
         </Link>
       </div>
     </div>

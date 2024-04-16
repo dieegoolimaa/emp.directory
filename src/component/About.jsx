@@ -1,7 +1,7 @@
 import "./component-style/about.css";
-import { MdEmail, MdHeight } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa6";
-import { FaGithubSquare, FaUser } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
 
 function About() {
   return (

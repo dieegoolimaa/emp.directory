@@ -4,8 +4,6 @@ import EmployeeForm from "../component/EmployeeForm";
 import { Button, TextInput } from "@mantine/core";
 import "./pages-style/employeepage.css";
 
-const API_URL = "http://localhost:4000";
-
 const EmployeesPage = () => {
   const [employees, setEmployees] = useState([]);
   const [showAddForm, setShowAddForm] = useState(false);
@@ -13,7 +11,7 @@ const EmployeesPage = () => {
 
   const getEmployees = async () => {
     try {
-      const response = await fetch(`${API_URL}/employees`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/employees`);
       if (response.ok) {
         const data = await response.json();
         setEmployees(data);

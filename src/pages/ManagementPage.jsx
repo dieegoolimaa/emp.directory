@@ -8,8 +8,6 @@ import { TiArrowBackOutline } from "react-icons/ti";
 
 import "./pages-style/managementpage.css";
 
-const API_URL = "http://localhost:4000";
-
 const ManagementPage = () => {
   //notification message and icon when switching between active and terminated status
   const xIcon = <IconX style={{ width: rem(20), height: rem(20) }} />;
@@ -28,7 +26,9 @@ const ManagementPage = () => {
   useEffect(() => {
     const getEmployee = async () => {
       try {
-        const response = await fetch(`${API_URL}/employees/${employeeId}`);
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/employees/${employeeId}`
+        );
         if (response.ok) {
           const data = await response.json();
           setEmployee({ ...data });
@@ -45,13 +45,16 @@ const ManagementPage = () => {
   const handleUpdateEmployeeStatus = async (newStatus) => {
     try {
       const updatedEmployee = { ...employee, status: newStatus };
-      const response = await fetch(`${API_URL}/employees/${employeeId}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedEmployee),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/employees/${employeeId}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedEmployee),
+        }
+      );
       if (response.ok) {
         setEmployee(updatedEmployee);
         // Show notification
@@ -74,13 +77,16 @@ const ManagementPage = () => {
   const handleUpdateSalary = async () => {
     try {
       const updatedEmployee = { ...employee, income: newSalary };
-      const response = await fetch(`${API_URL}/employees/${employeeId}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedEmployee),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/employees/${employeeId}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedEmployee),
+        }
+      );
       if (response.ok) {
         setEmployee(updatedEmployee);
         // alert("Salary updated successfully.");
@@ -96,9 +102,12 @@ const ManagementPage = () => {
   //Deleting an Employee from the backend
   const handleDeleteEmployee = async () => {
     try {
-      const response = await fetch(`${API_URL}/employees/${employeeId}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/employees/${employeeId}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (response.ok) {
         alert("Employee deleted successfully.");
         // Redirect to a different page
@@ -173,16 +182,22 @@ const ManagementPage = () => {
               <h3>
                 <b>Status:</b> {employee.status}
               </h3>
-              <div style={{ position: 'relative', display: 'inline-block', left: '-7em' }}>
-              <Switch
-                checked={employee.status === "Active"}
-                size="lg"
-                onChange={(event) =>
-                  handleUpdateEmployeeStatus(
-                    event.currentTarget.checked ? "Active" : "Terminated"
-                  )
-                }
-              />
+              <div
+                style={{
+                  position: "relative",
+                  display: "inline-block",
+                  left: "-7em",
+                }}
+              >
+                <Switch
+                  checked={employee.status === "Active"}
+                  size="lg"
+                  onChange={(event) =>
+                    handleUpdateEmployeeStatus(
+                      event.currentTarget.checked ? "Active" : "Terminated"
+                    )
+                  }
+                />
               </div>
               {notification && (
                 <Notification

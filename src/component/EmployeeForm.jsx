@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, TextInput, Select, useMantineTheme } from "@mantine/core";
-const API_URL = "http://localhost:4000";
 
 const EmployeeForm = ({ employee, isUpdate = false }) => {
   const theme = useMantineTheme();
@@ -19,9 +18,7 @@ const EmployeeForm = ({ employee, isUpdate = false }) => {
   const [department, setDepartment] = useState(
     isUpdate ? employee.department : ""
   );
-  const [position, setPosition] = useState(
-    isUpdate ? employee.position : ""
-  );
+  const [position, setPosition] = useState(isUpdate ? employee.position : "");
   const [income, setIncome] = useState(isUpdate ? employee.income : "");
   const [hiringDate, setHiringDate] = useState(
     isUpdate ? employee.hiringDate : ""
@@ -49,7 +46,9 @@ const EmployeeForm = ({ employee, isUpdate = false }) => {
 
     try {
       const response = await fetch(
-        `${API_URL}/employees${isUpdate ? `/${employee.id}` : ""}`,
+        `${import.meta.env.VITE_API_URL}/employees${
+          isUpdate ? `/${employee.id}` : ""
+        }`,
         {
           method: isUpdate ? "PUT" : "POST",
           headers: { "Content-Type": "application/json" },
@@ -80,7 +79,10 @@ const EmployeeForm = ({ employee, isUpdate = false }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: "600px", margin: "0 auto" }}>
+    <form
+      onSubmit={handleSubmit}
+      style={{ maxWidth: "600px", margin: "0 auto" }}
+    >
       <TextInput
         label="Name"
         placeholder="Name"
@@ -184,6 +186,3 @@ const EmployeeForm = ({ employee, isUpdate = false }) => {
 };
 
 export default EmployeeForm;
-
-
-
