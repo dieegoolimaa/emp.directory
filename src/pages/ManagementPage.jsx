@@ -169,12 +169,13 @@ const ManagementPage = () => {
               <h3>
                 <b>Status:</b> {employee.status}
               </h3>
+              <div style={{ position: 'relative', display: 'inline-block', left: '-7em' }}>
               <Switch
                 checked={employee.status === 'Active'}
                 size="lg"
                 onChange={(event) =>
                   handleUpdateEmployeeStatus(event.currentTarget.checked ? 'Active' : 'Terminated')}/>
-
+              </div>
               {notification && (
                 <Notification color={employee.status === 'Active' ? 'teal' : 'red'} title="Employee status updated!" mt="md">
                   {notification}
