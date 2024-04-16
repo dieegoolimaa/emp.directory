@@ -52,7 +52,7 @@ function About() {
 
       <div className="container">
         <div className="column">
-          <img src="Public/Images/Diego.jpg" alt="Diego Fernandes" />
+          <img src="./Images/Diego.jpg" alt="Diego Fernandes" />
           <h2>Diego Fernandes</h2>
           <p>Full Stack Developer</p>
           <p>
@@ -71,7 +71,7 @@ function About() {
         </div>
 
         <div className="column">
-          <img src="Public/Images/Celso.jpg" alt="Celso Gando" />
+          <img src="./Images/Celso.jpg" alt="Celso Gando" />
           <h2>Celso Gando</h2>
           <p>Full Stack Developer</p>
           <p>
@@ -90,7 +90,7 @@ function About() {
         </div>
 
         <div className="column">
-          <img src="Public/Images/Rui.jpg" alt="Rui Folgado" />
+          <img src="./Images/Rui.jpg" alt="Rui Folgado" />
           <h2>Rui Folgado</h2>
           <p>Full Stack Developer</p>
           <p>
