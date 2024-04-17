@@ -1,0 +1,61 @@
+.backgroundjobs{
+    background-color: #ccd5ed;
+  }
+  
+  
+  .career-details-container {
+      max-width: 800px; /* Set a maximum width for the container */
+      margin: 0 auto; /* Center the content horizontally */
+      padding: 2rem; /* Add some padding for spacing */
+      background-color: #ccd5ed;
+      border-radius: 15px;
+      border: 2px solid #858586;
+    }
+    
+    .career-details {
+      display: flex; /* Arrange logo and description side-by-side */
+      align-items: center; /* Vertically align content within */
+      margin-bottom: 2rem; /* Add space after the company details */
+    }
+    
+    .career-details img {
+      width: 100px; /* Set logo width */
+      height: 100px; /* Set logo height */
+      margin-right: 1rem; /* Add space between logo and text */
+    }
+    
+    h2 {
+      font-size: 1.8rem; /* Set heading size */
+      margin-bottom: 0.5rem; /* Add some space after the heading */
+    }
+    
+    h3 {
+      font-size: 1.4rem; /* Set subheading size */
+      margin-bottom: 0.5rem; /* Add some space after subheadings */
+    }
+    
+    p {
+      font-size: 1rem; /* Set paragraph text size */
+      line-height: 1.5; /* Adjust line spacing for better readability */
+      margin-bottom: 1rem; /* Add space between paragraphs */
+    }
+    
+    ul {
+      list-style: disc; /* Set bullet point style */
+      padding-left: 1rem; /* Add indentation for list items */
+      margin-bottom: 1rem; /* Add space after the list */
+    }
+    
+    .btn-container { /* Styles for the new container */
+      text-align: center; /* Center the button within the container */
+      max-width: 800px;
+    }
+    
+    .btn:hover {
+      background-color: #0069d9; /* Change button color on hover */
+    }
+    .movebuttons{
+      margin-top: 20px;
+      display: flex;
+      gap: 30px;
+    }

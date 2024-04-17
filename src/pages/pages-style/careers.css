@@ -1,0 +1,46 @@
+.careerContainer{
+    background-color: rgb(71, 70, 70);
+    border-radius: 8px;
+    margin: 10px;
+    flex: 1;
+   height: 100vh;
+  }
+  
+  .title h1{
+  color:white;
+  }
+  .career-listings h1{
+  color:rgb(243, 240, 240);
+  }
+  
+  .career-categories {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #f8f3f3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .career-item {
+    background-color: #4e4949;
+    border: 5px solid #868484;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+  }
+  
+  .career-item:hover{
+  background-color: tomato;
+  }
+  
+  .career-item p, h2 {
+    margin: 5px 0;
+    color: rgb(255, 255, 255);
+  }
