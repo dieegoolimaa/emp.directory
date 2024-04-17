@@ -39,8 +39,11 @@ const EmployeesPage = () => {
 
   return (
     <div className="employees-page">
-      <h1>All employees</h1>
-      <Button onClick={handleToggleForm} style={{ width: "100%" }}>
+      {showAddForm ? <h1>Register new employee</h1> : <h1>All employees</h1>}
+      <Button
+        onClick={handleToggleForm}
+        style={({ width: "500px" }, { alignContent: "center" })}
+      >
         {showAddForm ? "Cancel" : "Add New Employee"}
       </Button>
       {showAddForm && <EmployeeForm />}
