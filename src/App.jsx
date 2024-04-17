@@ -6,7 +6,7 @@ import Navbar from "./component/Navbar";
 import EmployeesDetailPage from "./pages/EmployeeDetailPage";
 import ManagementPage from "./pages/ManagementPage";
 import CareersPage from "./pages/CareerPage";
-import CareersDetailPage from "./pages/CareerDetailPage"; 
+import CareersDetailPage from "./pages/CareersDetailPage"; 
 function App() {
   return (
     <>
