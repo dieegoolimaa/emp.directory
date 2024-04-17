@@ -53,7 +53,7 @@ const CareersPage = () => {
                 <ul className="career-items">
     {careers.map((career) => (
         <li key={career.id}>
-            <Link to={`/careers/${career.id}`}>
+            <Link to={`/career/${career.id}`}>
                 <div className="career-item">
                     <h2>{career.jobTitle}</h2>
                     <p>{career.company}</p>
