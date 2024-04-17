@@ -5,7 +5,7 @@ import EmployeesPage from "./pages/EmployeesPage";
 import Navbar from "./component/Navbar";
 import EmployeesDetailPage from "./pages/EmployeeDetailPage";
 import ManagementPage from "./pages/ManagementPage";
-import CareerPage from "./pages/CareerPage";
+import CareersPage from "./pages/CareerPage";
 import CareersDetailPage from "./pages/CareerDetailPage"; 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/employees" element={<EmployeesPage />} />
-        <Route path="/career" element={<CareerPage />} />
+        <Route path="/career" element={<CareersPage />} />
         <Route path="/career/:careerId" element={<CareersDetailPage />} />
         <Route path="/employees/:employeeId">
           <Route index element={<EmployeesDetailPage />} />
