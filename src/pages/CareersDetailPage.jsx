@@ -84,7 +84,7 @@ const CareersDetailPage = () => {
             <SlHome />
            </Button>
          </Link>
-         <Link to={`/careers`}>
+         <Link to={`/career`}>
           <Button type="button">
             <TiArrowBackOutline />
           </Button>
