@@ -8,46 +8,56 @@ function About() {
     <div>
       <div className="about">
         <h2>(TIED)</h2>
-        <p>Tech Innovators Employee Directory </p>
+        <u>Tech Innovators Employee Directory </u>
+
+        <br />
+
         <h3>
           {" "}
           <strong> History </strong>{" "}
         </h3>
-        Founded in the beginning of 2021 by visionary entrepreneurs, Tech
-        Innovators started as a small software development firm. Over the years,
-        we’re growing into a global technology powerhouse, serving Fortune 500
-        companies across diverse industries.
-        <h3>
-          {" "}
-          <br />
-          <br />
-          <strong>Company Overview:</strong>{" "}
-        </h3>
-        <strong> Mission </strong> At Tech Innovators, our mission is to empower
-        businesses through cutting-edge technology solutions. We believe in
+        
+        <strong> 2022: Launch and Initial Growth </strong>
+        In the early 2022, TIED made its online platform public.
+        The platform was warmly welcomed, attracting thousands of users in just a few months.
+        In addition, the company formed alliances with several businesses,
+        which helped to broaden the directory’s offerings.
+
+        <strong> 2023: Expansion and Innovation </strong>
+        TIED concentrated on broadening its services and bringing innovation to its platform.
+        They rolled out new features, including advanced search options and personalized suggestions.
+        To support its growth, the company increased its workforce and relocated to a more spacious office.
+        
+        <br />
+
+        <strong> 2024: Recognition, Achievements and Future Plans </strong>
+        
+        <br />
+
+        <strong>Here are some of the key achievements:</strong>
+        <strong>Partnership with Ironhacks</strong> 
+        TIED is in talks with Ironhacks, a renowned tech company, to integrate their services into our platform. <br />
+        This partnership will provide our users with access to a wider range of tech resources.
+       
+       <strong>Expansion in Germany</strong> 
+       TIED plans to expand its presence in Germany by partnering with local businesses. <br />
+       This will not only diversify our Directory offerings but also help us reach a larger audience.
+
+       <strong>User Growth</strong> 
+       By the end of 2024, TIED aims to double its user base, reaching over 1 million active users.
+
+        <strong> Mission </strong> 
+        At Tech Innovators, our mission is to empower
+        businesses through cutting-edge technology solutions.<br /> We believe in
         driving innovation, fostering collaboration, and delivering exceptional
         value to our clients.
-        <br />
-        <br />
-        <h3>
-          {" "}
-          <strong>Values</strong>
-        </h3>
-        <p>
-          {" "}
-          <strong>Innovation</strong>: <br />
-          We thrive on creativity and embrace new ideas.
-        </p>
+        
         <p>
           {" "}
           <strong>Integrity</strong>: <br />
           We uphold honesty, transparency, and ethical conduct.
         </p>
-        <p>
-          {" "}
-          <strong>Teamwork</strong>: <br />
-          Together, we achieve more than we can individually.
-        </p>
+        
       </div>
 
       <div className="container">
