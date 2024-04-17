@@ -49,6 +49,7 @@ const EmployeesPage = () => {
         placeholder="Enter name"
         value={searchQuery}
         onChange={handleSearch}
+        style={({ width: "200px" }, { marginTop: "20px" })}
       />
       {filteredEmployees.length > 0 ? (
         <ul>

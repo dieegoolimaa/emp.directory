@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, TextInput, Select, useMantineTheme } from "@mantine/core";
+import "./component-style/employee-form.css";
 
 const EmployeeForm = ({ employee, isUpdate = false }) => {
   const theme = useMantineTheme();
@@ -79,108 +80,110 @@ const EmployeeForm = ({ employee, isUpdate = false }) => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{ maxWidth: "600px", margin: "0 auto" }}
-    >
-      <TextInput
-        label="Name"
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-        style={{ marginBottom: theme.spacing.sm }}
-      />
-      <Select
-        label="Status"
-        value={status}
-        onChange={(value) => setStatus(value)}
-        data={["Active", "Terminated"]}
-        required
-        style={{ marginBottom: theme.spacing.sm }}
-      />
-      <TextInput
-        label="Gender"
-        placeholder="Gender"
-        value={gender}
-        onChange={(e) => setGender(e.target.value)}
-        style={{ marginBottom: theme.spacing.sm }}
-      />
-      <TextInput
-        label="Phone"
-        placeholder="Phone"
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
-        style={{ marginBottom: theme.spacing.sm }}
-        type="number"
-      />
-      <TextInput
-        label="Email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-        error={email && !/\S+@\S+\.\S+/.test(email)} // Check if email format is valid
-        errorLabel="Invalid email address"
-        style={{ marginBottom: theme.spacing.sm }}
-      />
-      <TextInput
-        label="City"
-        placeholder="City"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-        style={{ marginBottom: theme.spacing.sm }}
-      />
-      <TextInput
-        label="Country"
-        placeholder="Country"
-        value={country}
-        onChange={(e) => setCountry(e.target.value)}
-        required
-        style={{ marginBottom: theme.spacing.sm }}
-      />
-      <TextInput
-        label="Department"
-        placeholder="Department"
-        value={department}
-        onChange={(e) => setDepartment(e.target.value)}
-        style={{ marginBottom: theme.spacing.sm }}
-      />
-      <TextInput
-        label="Position"
-        placeholder="Position"
-        value={position}
-        onChange={(e) => setPosition(e.target.value)}
-        style={{ marginBottom: theme.spacing.sm }}
-      />
-      <TextInput
-        label="Hiring Date"
-        type="date"
-        value={hiringDate}
-        onChange={(e) => setHiringDate(e.target.value)}
-        style={{ marginBottom: theme.spacing.sm }}
-      />
-      <TextInput
-        label="Initial Salary"
-        placeholder="Initial Salary"
-        value={income}
-        onChange={(e) => setIncome(e.target.value)}
-        required
-        style={{ marginBottom: theme.spacing.sm }}
-      />
-      <TextInput
-        label="Modality"
-        placeholder="Modality"
-        value={modality}
-        onChange={(e) => setModality(e.target.value)}
-        style={{ marginBottom: theme.spacing.md }}
-      />
-      <div style={{ marginBottom: theme.spacing.sm }}>
-        <input type="file" onChange={handleImageChange} accept="image/*" />
+    <form onSubmit={handleSubmit} className="employee-form">
+      <div className="form-group1">
+        <TextInput
+          label="Name"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          className="text-input1"
+        />
+        <TextInput
+          label="Email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          error={email && !/\S+@\S+\.\S+/.test(email)} // Check if email format is valid
+          errorLabel="Invalid email address"
+          className="text-input1"
+        />
       </div>
-      <Button type="submit" style={{ width: "100%" }}>
-        {isUpdate ? "Update" : "Add New"} Employee
-      </Button>
+      <div className="form-group2-3">
+        <div className="form-group2">
+          <Select
+            label="Status"
+            value={status}
+            onChange={(value) => setStatus(value)}
+            data={["Active", "Terminated"]}
+            required
+          />
+          <TextInput
+            label="Gender"
+            placeholder="Gender"
+            value={gender}
+            onChange={(e) => setGender(e.target.value)}
+          />
+          <TextInput
+            label="Phone"
+            placeholder="Phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            type="number"
+          />
+          <TextInput
+            label="City"
+            placeholder="City"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+          <TextInput
+            label="Country"
+            placeholder="Country"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group3">
+          <TextInput
+            label="Department"
+            placeholder="Department"
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
+          />
+          <TextInput
+            label="Position"
+            placeholder="Position"
+            value={position}
+            onChange={(e) => setPosition(e.target.value)}
+          />
+          <TextInput
+            label="Hiring Date"
+            type="date"
+            value={hiringDate}
+            onChange={(e) => setHiringDate(e.target.value)}
+          />
+          <TextInput
+            label="Initial Salary"
+            placeholder="Initial Salary"
+            value={income}
+            onChange={(e) => setIncome(e.target.value)}
+            required
+          />
+          <TextInput
+            label="Modality"
+            placeholder="Modality"
+            value={modality}
+            onChange={(e) => setModality(e.target.value)}
+          />
+          <div
+            style={{
+              marginBottom: theme.spacing.sm,
+              marginTop: theme.spacing.sm,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <input type="file" onChange={handleImageChange} accept="image/*" />
+          </div>
+          <Button type="submit" style={{ marginTop: theme.spacing.sm }}>
+            {isUpdate ? "Update" : "Add New"} Employee
+          </Button>
+        </div>
+      </div>
     </form>
   );
 };

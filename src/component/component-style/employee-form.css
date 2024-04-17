@@ -1,0 +1,38 @@
+.employee-form {
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  align-items: center;
+}
+
+.form-group1 {
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.text-input1 {
+  width: 90%;
+}
+
+.form-group2 {
+  width: 250px;
+}
+
+.form-group3 {
+  width: 250px;
+}
+
+.form-group2-3 {
+  width: 85%;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
