@@ -1,57 +1,58 @@
 import "./pages-style/homepage.css";
-// import Future_Tech_Innovations from "./pages/logos/future_tech.gif";
-// import Advanced_Robotics_Corp from "./pages/logos/advanced_robotics.jpg";
-// import Quantum_Computing_Solutions from "./pages/logos/quantum_c.s..gif"; // Quantum Computing Solutions
-// import Alpha_Energy_Dynamics from "./pages/logos/alpha_energy_d.jpg";
-// import Data_Science_Analytics_Ltd from "./pages/logos/data_science.gif";
-// import Cyber_Security_Associates from "./pages/logos/cyber_security.jpg";
+import Future_Tech_Innovations from "./logos/future_tech.gif";
+import Advanced_Robotics_Corp from "./logos/advanced_robotics.jpg";
+import Quantum_Computing_Solutions from "./logos/quantum_c.s..gif";
+import Alpha_Energy_Dynamics from "./logos/alpha_energy_d.jpg";
+import Data_Science_Analytics_Ltd from "./logos/data_science.gif";
+import Cyber_Security_Associates from "./logos/cyber_security.jpg";
 
 function HomePage() {
-  // Companies List
-  // const companies = [
-  //   {
-  //     name: "Future Tech Innovations",
-  //     logo: Future_Tech_Innovations,
-  //   },
-  //   {
-  //     name: "Advanced Robotics Corp",
-  //     logo: Advanced_Robotics_Corp,
-  //   },
-  //   {
-  //     name: "Quantum Computing Solutions",
-  //     logo: Quantum_Computing_Solutions,
-  //   },
-  //   {
-  //     name: "Alpha Energy Dynamics",
-  //     logo: Alpha_Energy_Dynamics,
-  //   },
-  //   {
-  //     name: "Data Science Analytics Ltd",
-  //     logo: Data_Science_Analytics_Ltd,
-  //   },
-  //   {
-  //     name: "Cyber Security Associates",
-  //     logo: Cyber_Security_Associates,
-  //   },
-  // ];
-
   return (
     <div className="home-page">
-      <h1>Welcome to TD - Tech Innovators</h1>
-      <p>Your trusted partner in innovation.</p>
-
-      {/* Other content here */}
-
-      <div className="companies-section">
-        <h2>Companies We have Worked With</h2>
-        {/* <div className="companies-list">
-          {companies.map((company, index) => (
-            <div key={index} className="company-card">
-              <img src={company.logo} alt={company.name} />
-              <h3>{company.name}</h3>
-            </div>
-          ))}
-        </div> */}
+      <div>
+        <h1>
+          WELCOME TO <br /> TECH INNOVATORS
+        </h1>
+        <p>Your trusted partner in innovation.</p>
+      </div>
+      <div className="empty-container"></div>
+      <div>
+        <h2>Companies we work with:</h2>
+        <div className="companies-section">
+          <div className="company-container">
+            <img src={Future_Tech_Innovations} alt="Future_Tech_Innovations" />
+            <h3>Future Tech Innovations</h3>
+          </div>
+          <div className="company-container">
+            <img src={Advanced_Robotics_Corp} alt="Advanced_Robotics_Corp" />
+            <h3>Advanced Robotics Corp</h3>
+          </div>
+          <div className="company-container">
+            <img
+              src={Quantum_Computing_Solutions}
+              alt="Quantum_Computing_Solutions"
+            />
+            <h3>Quantum Computing Solutions</h3>
+          </div>
+          <div className="company-container">
+            <img src={Alpha_Energy_Dynamics} alt="Alpha_Energy_Dynamics" />
+            <h3>Alpha Energy Dynamics</h3>
+          </div>
+          <div className="company-container">
+            <img
+              src={Data_Science_Analytics_Ltd}
+              alt="Data_Science_Analytics_Ltd"
+            />
+            <h3>Data Science & Analytics Ltd</h3>
+          </div>
+          <div className="company-container">
+            <img
+              src={Cyber_Security_Associates}
+              alt="Cyber_Security_Associates"
+            />
+            <h3>Cyber Security Associates</h3>
+          </div>
+        </div>
       </div>
     </div>
   );
