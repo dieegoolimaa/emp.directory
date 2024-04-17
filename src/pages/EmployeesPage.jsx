@@ -44,33 +44,37 @@ const EmployeesPage = () => {
         {showAddForm ? "Cancel" : "Add New Employee"}
       </Button>
       {showAddForm && <EmployeeForm />}
-      <TextInput
-        label="Search by name"
-        placeholder="Enter name"
-        value={searchQuery}
-        onChange={handleSearch}
-        style={({ width: "200px" }, { marginTop: "20px" })}
-      />
-      {filteredEmployees.length > 0 ? (
-        <ul>
-          {filteredEmployees.map((employee) => (
-            <Link to={`/employees/${employee.id}`}>
-              <li key={employee.id}>
-                <div className="employee-card">
-                  <img src={employee.picture} alt={employee.name} />
-
-                  <div className="employee-name-position">
-                    <h3>{employee.name}</h3>
-                    <p>{employee.position}</p>
-                  </div>
-                </div>
-              </li>
-            </Link>
-          ))}
-        </ul>
-      ) : (
-        <h1>No employees found</h1>
+      {/* Conditionally render search bar based on showAddForm state */}
+      {!showAddForm && (
+        <TextInput
+          label="Search by name"
+          placeholder="Enter name"
+          value={searchQuery}
+          onChange={handleSearch}
+          style={({ width: "200px" }, { marginTop: "20px" })}
+        />
       )}
+      {!showAddForm &&
+        (filteredEmployees.length > 0 ? (
+          <ul>
+            {filteredEmployees.map((employee) => (
+              <Link to={`/employees/${employee.id}`}>
+                <li key={employee.id}>
+                  <div className="employee-card">
+                    <img src={employee.picture} alt={employee.name} />
+
+                    <div className="employee-name-position">
+                      <h3>{employee.name}</h3>
+                      <p>{employee.position}</p>
+                    </div>
+                  </div>
+                </li>
+              </Link>
+            ))}
+          </ul>
+        ) : (
+          <h1>No employees found</h1>
+        ))}
     </div>
   );
 };
