@@ -28,16 +28,19 @@ function About() {
           to its platform. They rolled out new features, including advanced
           search options and personalized suggestions. To support its growth,
           the company increased its workforce and relocated to a more spacious
-          office.
+          office in Portugal.
           <br />
           <br />
           <strong> 2024: Recognition, Achievements and Future Plans </strong>
           <strong>Here are some of the key achievements:</strong>
           <br />
           <strong>Partnership with Ironhacks</strong>
-          TIED is in talks with Ironhacks, a renowned tech company, to integrate
-          their services into our platform. This partnership will provide our
-          users with access to a wider range of tech resources.
+          TIED is in talks with Ironhacks, a renowned Global Tech School 
+          ranked top 2 worldwide, to integrate
+          our services into their platform. This partnership will help our
+          users, should they want to change careers, the ability to apply through
+          us and get a discount when they register and a package where tutors 
+          are available on saturdays during their project period.
           <br />
           <br />
           <strong>Expansion in Germany</strong>
@@ -47,8 +50,8 @@ function About() {
           <br />
           <br />
           <strong>User Growth</strong>
-          By the end of 2024, TIED aims to double its user base, reaching over 1
-          million active users.
+          By the end of 2024, TIED aims to double its user base, reaching over 
+          1000 active users.
           <br />
           <br />
           <strong> Mission </strong>
