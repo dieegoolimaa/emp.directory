@@ -1,5 +1,6 @@
 .employee-form {
   width: 90%;
+  height: 100%;
   margin: 30px auto;
   display: flex;
   flex-direction: column;

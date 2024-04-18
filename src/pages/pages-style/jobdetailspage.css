@@ -1,61 +1,75 @@
-.backgroundjobs{
-    background-color: #ccd5ed;
-  }
-  
-  
-  .career-details-container {
-      max-width: 800px; /* Set a maximum width for the container */
-      margin: 0 auto; /* Center the content horizontally */
-      padding: 2rem; /* Add some padding for spacing */
-      background-color: #ccd5ed;
-      border-radius: 15px;
-      border: 2px solid #858586;
-    }
-    
-    .career-details {
-      display: flex; /* Arrange logo and description side-by-side */
-      align-items: center; /* Vertically align content within */
-      margin-bottom: 2rem; /* Add space after the company details */
-    }
-    
-    .career-details img {
-      width: 100px; /* Set logo width */
-      height: 100px; /* Set logo height */
-      margin-right: 1rem; /* Add space between logo and text */
-    }
-    
-    h2 {
-      font-size: 1.8rem; /* Set heading size */
-      margin-bottom: 0.5rem; /* Add some space after the heading */
-    }
-    
-    h3 {
-      font-size: 1.4rem; /* Set subheading size */
-      margin-bottom: 0.5rem; /* Add some space after subheadings */
-    }
-    
-    p {
-      font-size: 1rem; /* Set paragraph text size */
-      line-height: 1.5; /* Adjust line spacing for better readability */
-      margin-bottom: 1rem; /* Add space between paragraphs */
-    }
-    
-    ul {
-      list-style: disc; /* Set bullet point style */
-      padding-left: 1rem; /* Add indentation for list items */
-      margin-bottom: 1rem; /* Add space after the list */
-    }
-    
-    .btn-container { /* Styles for the new container */
-      text-align: center; /* Center the button within the container */
-      max-width: 800px;
-    }
-    
-    .btn:hover {
-      background-color: #0069d9; /* Change button color on hover */
-    }
-    .movebuttons{
-      margin-top: 20px;
-      display: flex;
-      gap: 30px;
-    }
+.backgroundjobs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  text-wrap: wrap;
+  border-radius: 8px;
+  margin: 10px;
+  background-color: #ccd5ed;
+}
+
+.career-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.career-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.career-details img {
+  width: 100px;
+  height: 100px;
+  margin-right: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1c213d;
+}
+
+h3 {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.btn-container {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #0069d9;
+}
+
+.move-buttons {
+  width: 150px;
+  justify-content: space-between;
+  margin-top: 20px;
+  display: flex;
+}

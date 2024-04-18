@@ -10,8 +10,8 @@ function About() {
   return (
     <div>
       <div className="about">
-        <h2>(TIED)</h2>
-        <h2>Tech Innovators Employee Directory </h2>
+        <h2 id="title-about">(TIED)</h2>
+        <h2 id="subtitle-about">Tech Innovators Employee Directory </h2>
         <div className="container-about">
           <h3>
             <strong> History </strong>
