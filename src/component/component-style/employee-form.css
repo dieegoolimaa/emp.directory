@@ -1,6 +1,6 @@
 .employee-form {
   width: 90%;
-  height: 100%;
+  height: 550px;
   margin: 30px auto;
   display: flex;
   flex-direction: column;
@@ -16,6 +16,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 .text-input1 {

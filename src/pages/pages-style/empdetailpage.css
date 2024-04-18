@@ -77,7 +77,7 @@
 }
 
 .empdetailpage h3 {
-  margin: 0;
+  margin-top: 5px;
   color: #1c213d;
   padding: 5px;
   font-size: medium;
@@ -120,9 +120,8 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  max-width: 300px;
+  max-width: 200px;
   height: auto;
-  /* border: 1px solid #e37114; */
 }
 
 .title-empdetailpage {

@@ -36,7 +36,7 @@ const EmployeeDetailPage = () => {
         </div>
         <img src={employee.picture} />
         <h3>
-          <b>Status:</b> {employee.status}
+          <b style={{ marginRight: "5px" }}>Status:</b> {employee.status}
         </h3>
       </div>
       <div className="container-informations">
@@ -47,37 +47,39 @@ const EmployeeDetailPage = () => {
           <ul>
             <li>
               <h3>
-                <b>ID:</b> {employee.id}
+                <b style={{ marginRight: "5px" }}>ID: </b> {employee.id}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Name: </b> {employee.name}
+                <b style={{ marginRight: "5px" }}>Name: </b> {employee.name}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Gender: </b> {employee.gender}
+                <b style={{ marginRight: "5px" }}>Gender: </b> {employee.gender}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Email: </b> {employee.email}
+                <b style={{ marginRight: "5px" }}>Email: </b> {employee.email}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Phone: </b> {employee.phone}
+                <b style={{ marginRight: "5px" }}>Phone: </b> {employee.phone}
               </h3>
             </li>
             <li>
               <h3>
-                <b>City: </b> {employee.location?.city}
+                <b style={{ marginRight: "5px" }}>City: </b>{" "}
+                {employee.location?.city}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Country: </b> {employee.location?.country}
+                <b style={{ marginRight: "5px" }}>Country: </b>{" "}
+                {employee.location?.country}
               </h3>
             </li>
           </ul>
@@ -89,27 +91,31 @@ const EmployeeDetailPage = () => {
           <ul>
             <li>
               <h3>
-                <b>Position: </b> {employee.position}
+                <b style={{ marginRight: "5px" }}>Position: </b>{" "}
+                {employee.position}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Department: </b> {employee.department}
+                <b style={{ marginRight: "5px" }}>Department: </b>{" "}
+                {employee.department}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Salary: </b> {employee.income}
+                <b style={{ marginRight: "5px" }}>Salary: </b> {employee.income}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Start Date: </b> {employee.hiringDate}
+                <b style={{ marginRight: "5px" }}>Start Date: </b>{" "}
+                {employee.hiringDate}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Modality: </b> {employee.modality}
+                <b style={{ marginRight: "5px" }}>Modality: </b>{" "}
+                {employee.modality}
               </h3>
             </li>
           </ul>

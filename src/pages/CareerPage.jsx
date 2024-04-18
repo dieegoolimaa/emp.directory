@@ -40,7 +40,7 @@ const CareersPage = () => {
 
   return (
     <div className="career-page">
-      <h1>Available Job Opportunities</h1>
+      <h1 style={{ marginBottom: "20px" }}>Available Job Opportunities</h1>
       <div>
         <ul>
           {careers.map((career) => (

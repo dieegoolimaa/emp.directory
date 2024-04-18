@@ -135,30 +135,32 @@ const ManagementPage = () => {
           <ul>
             <li>
               <h3>
-                <b>Hiring Date: </b>
+                <b style={{ marginRight: "5px" }}>Hiring Date: </b>
                 {employee.hiringDate}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Modality: </b>
+                <b style={{ marginRight: "5px" }}>Modality: </b>
                 {employee.modality}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Department: </b>
+                <b style={{ marginRight: "5px" }}>Department: </b>
                 {employee.department}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Position:</b> {employee.position}
+                <b style={{ marginRight: "5px" }}>Position:</b>{" "}
+                {employee.position}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Current Income:</b> {employee.income} €
+                <b style={{ marginRight: "5px" }}>Current Income:</b>{" "}
+                {employee.income} €
               </h3>
             </li>
             {showSalaryForm ? (
@@ -183,7 +185,7 @@ const ManagementPage = () => {
             )}
             <li>
               <h3>
-                <b>Status:</b> {employee.status}
+                <b style={{ marginRight: "5px" }}>Status:</b> {employee.status}
               </h3>
               <div
                 style={{

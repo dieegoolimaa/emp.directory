@@ -10,7 +10,9 @@
   margin: 10px;
   background-color: #ccd5ed;
 }
-
+.employees-page h1 {
+  margin-bottom: 20px;
+}
 .employees-page ul {
   margin-top: 20px;
   width: 100%;
