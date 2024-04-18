@@ -6,7 +6,8 @@ import "./component-style/employee-form.css";
 const EmployeeForm = ({ employee, isUpdate = false }) => {
   const theme = useMantineTheme();
   const navigate = useNavigate();
-
+  
+  // set states
   const [name, setName] = useState(isUpdate ? employee.name : "");
   const [status, setStatus] = useState(isUpdate ? employee.status : "Active");
   const [gender, setGender] = useState(isUpdate ? employee.gender : "");
