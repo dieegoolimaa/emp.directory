@@ -8,7 +8,6 @@ import { TiArrowBackOutline } from "react-icons/ti";
 const EmployeeDetailPage = () => {
   const { employeeId } = useParams();
   const [employee, setEmployee] = useState({});
-  const initialStatus = "Active";
 
   const getEmployee = async () => {
     try {
@@ -53,32 +52,32 @@ const EmployeeDetailPage = () => {
             </li>
             <li>
               <h3>
-                <b>Name:</b> {employee.name}
+                <b>Name: </b> {employee.name}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Gender:</b> {employee.gender}
+                <b>Gender: </b> {employee.gender}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Email:</b> {employee.email}
+                <b>Email: </b> {employee.email}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Phone:</b> {employee.phone}
+                <b>Phone: </b> {employee.phone}
               </h3>
             </li>
             <li>
               <h3>
-                <b>City:</b> {employee.location?.city}
-              </h3>{" "}
+                <b>City: </b> {employee.location?.city}
+              </h3>
             </li>
             <li>
               <h3>
-                <b>Country:</b> {employee.location?.country}
+                <b>Country: </b> {employee.location?.country}
               </h3>
             </li>
           </ul>
@@ -90,27 +89,27 @@ const EmployeeDetailPage = () => {
           <ul>
             <li>
               <h3>
-                <b>Position:</b> {employee.position}
+                <b>Position: </b> {employee.position}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Department:</b> {employee.department}
+                <b>Department: </b> {employee.department}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Salary:</b> {employee.income}
+                <b>Salary: </b> {employee.income}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Start Date:</b> {employee.hiringDate}
+                <b>Start Date: </b> {employee.hiringDate}
               </h3>
             </li>
             <li>
               <h3>
-                <b>Modality:</b> {employee.modality}
+                <b>Modality: </b> {employee.modality}
               </h3>
             </li>
           </ul>

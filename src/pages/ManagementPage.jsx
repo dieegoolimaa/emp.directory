@@ -174,7 +174,10 @@ const ManagementPage = () => {
                 <Button onClick={handleUpdateSalary}>Update Salary</Button>
               </div>
             ) : (
-              <Button onClick={() => setShowSalaryForm(true)}>
+              <Button
+                style={{ margin: "0.5em" }}
+                onClick={() => setShowSalaryForm(true)}
+              >
                 Update Salary
               </Button>
             )}
@@ -190,6 +193,7 @@ const ManagementPage = () => {
                 }}
               >
                 <Switch
+                  style={{ marginTop: "0.5em" }}
                   checked={employee.status === "Active"}
                   size="lg"
                   onChange={(event) =>

@@ -15,6 +15,7 @@
   margin-top: 20px;
   width: 100%;
 }
+
 .employees-page li {
   width: 100%;
   display: flex;
@@ -33,8 +34,8 @@
 .employee-name-position {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  text-align: left;
   margin-left: 20px;
 }
 
